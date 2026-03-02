@@ -1,0 +1,62 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|svg|webp|ico)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=604800"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(css|js)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=604800"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(mp3|wav|ogg|flac|aac|m4a)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=2592000"
+          },
+          {
+            "key": "Accept-Ranges",
+            "value": "bytes"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(mp4|webm)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=2592000"
+          },
+          {
+            "key": "Accept-Ranges",
+            "value": "bytes"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: transparent;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(ellipse at 20% 50%, rgba(72, 145, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(118, 75, 162, 0.08) 0%, transparent 50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: rgba(72, 145, 255, 0.1);
+    border: 1px solid rgba(72, 145, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.4rem;
+    color: #4891ff;
+}
+
+.contact h2 {
+    font-size: 2.2rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.contact-subtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.contact {
+    animation: fadeUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact { 
+    width: 600px;
+    max-width: 90vw;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.input-box .input-field {
+    width: 48.5%;
+}
+
+.field .item {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    margin: 8px 0;
+    transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.field .item:focus {
+    border-color: rgba(72, 145, 255, 0.5);
+    background: rgba(72, 145, 255, 0.05);
+    box-shadow: 0 0 0 4px rgba(72, 145, 255, 0.08);
+}
+
+.field .item::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 400;
+}
+
+.textarea-field .error-text {
+    margin-top: -10px;
+}
+
+.textarea-field .item {
+    resize: none;
+    min-height: 140px;
+}
+
+.button {
+    padding: 14px 36px;
+    background: #4891ff;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.button:hover {
+    background: #5a9fff;
+    box-shadow: 0 10px 30px rgba(72, 145, 255, 0.35);
+    transform: translateY(-3px);
+}
+
+.button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(72, 145, 255, 0.25);
+}
+
+.button i {
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+.button:hover i {
+    transform: translateX(3px) translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .input-box {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .input-box .input-field {
+        width: 100%;
+    }
+    
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+    
+    .back-link {
+        top: 15px;
+        left: 15px;
+    }
+}
+
+::selection {
+    background: #4891ff;
+    color: #fff;
+}
