@@ -88,6 +88,15 @@ img {
     pointer-events:none;
 }
 
+video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none;
+}
+
+video {
+    pointer-events: none;
+}
+
 /* Navbar centrée - SANS le bouton */
 .navbar {
     position: absolute;
@@ -305,6 +314,22 @@ img {
     padding: 30px;
     transform: scale(0.8);
     transform-origin: top center;
+}
+
+video::-webkit-media-controls {
+    display: none !important;
+}
+
+video::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+video::-webkit-media-controls-play-button {
+    display: none !important;
+}
+
+video::--webkit-media-controls-start-playback-button {
+    display: none !important;
 }
 
 .album-art {
