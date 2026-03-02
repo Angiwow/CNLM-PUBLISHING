@@ -85,7 +85,9 @@ img {
     display: block;
     mix-blend-mode: screen;
     filter: brightness(1) contrast(1.5) saturate(1.2);
+    pointer-events:none;
 }
+
 /* Navbar centrée - SANS le bouton */
 .navbar {
     position: absolute;
@@ -172,7 +174,7 @@ img {
         right: -100%;
         left: auto;
         transform: none;
-        background: white;
+        background: rgb(0, 0, 0);
         width: 85vw;
         max-width: 350px;
         height: calc(100vh - 60px);
@@ -197,7 +199,7 @@ img {
     .navbar ul li a {
         display: block;
         padding: 1.5rem 2rem;
-        color: black;
+        color: rgb(255, 255, 255);
         font-size: 1.6rem;
         border-bottom: 1px solid #eee;
     }
